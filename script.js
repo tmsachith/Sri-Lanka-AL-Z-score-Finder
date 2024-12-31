@@ -1,3 +1,9 @@
+if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+    API_URL = 'https://sri-lanka-al-z-score-finder.vercel.app'; // Your Vercel-deployed backend URL
+  }else{
+    API_URL = 'http://localhost:3000' // Default to localhost for development
+  }
+
 document.addEventListener('DOMContentLoaded', function() {
     fetchYears();
 });
@@ -14,7 +20,7 @@ function hideLoader(id) {
 
 function fetchYears() {
     showLoader('yearLoader');
-    fetch('http://localhost:3000/years')
+    fetch(`${API_URL}/years`)
         .then(response => response.json())
         .then(years => {
             const yearSelect = document.getElementById('year');
@@ -34,7 +40,7 @@ function fetchYears() {
 
 function populateDistricts(year) {
     showLoader('districtLoader');
-    fetch(`http://localhost:3000/districts/${year}`)
+    fetch(`${API_URL}/districts/${year}`)
         .then(response => response.json())
         .then(districts => {
             const districtSelect = document.getElementById('district');
@@ -55,7 +61,7 @@ function populateDistricts(year) {
 
 function populateCourses(year, district) {
     showLoader('courseLoader');
-    fetch(`http://localhost:3000/courses/${year}/${district}`)
+    fetch(`${API_URL}/courses/${year}/${district}`)
         .then(response => response.json())
         .then(courses => {
             coursesData = courses;
