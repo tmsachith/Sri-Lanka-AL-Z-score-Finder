@@ -1,7 +1,9 @@
-const express = require('express');
-const { MongoClient } = require('mongodb');
-const cors = require('cors');
-require('dotenv').config();
+import express from 'express';
+import { MongoClient } from 'mongodb';
+import cors from 'cors';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -89,4 +91,4 @@ app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
 
-module.exports = app;
+export default app;
