@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-Score Lookup</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Z-Score Lookup</h1>
+        <div class="form-group">
+            <label for="year">Year:</label>
+            <select id="year">
+                <option value="">Select Year</option>
+            </select>
+            <div class="loader" id="yearLoader"></div>
+        </div>
+        <div class="form-group">
+            <label for="district">District:</label>
+            <select id="district">
+                <option value="">Select District</option>
+            </select>
+            <div class="loader" id="districtLoader"></div>
+        </div>
+        <div class="form-group">
+            <label for="course">Course:</label>
+            <select id="course">
+                <option value="">Select Course</option>
+            </select>
+            <div class="loader" id="courseLoader"></div>
+        </div>
+        <div id="result" class="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

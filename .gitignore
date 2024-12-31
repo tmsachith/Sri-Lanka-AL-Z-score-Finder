@@ -1,0 +1,9 @@
+node_modules/
+
+.env
+
+COP_2021_2022-ENGLISH.xlsx
+COP_2022_2023-ENGLISH.xlsx
+COP_2023_2024-ENGLISH.xlsx
+
+data.py
